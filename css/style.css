@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.wrapper {
+    @apply w-full overflow-hidden;
+}
+
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1320px) {
+    .container {
+        max-width: calc(100% - 24px);
+    }
+}
+
+.btn-blue-sm {
+    @apply bg-blue-1 text-white h-[34px] rounded-[8px] inline-flex items-center justify-center px-3 text-xs lg:text-sm tracking-[-4%]
+}
+
+.btn-blue {
+    @apply bg-blue-1 text-white flex items-center justify-center gap-[10px] text-lg leading-[13px] tracking-[-0.6px] w-[240px] h-[55px] rounded-[12px];
+}
+
+.swp-pagination {
+    @apply !w-auto flex items-center gap-1
+}
+
+.swp-pagination span {
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 1;
+    background: #D1DCE4;
+    width: 14px;
+    height: 14px;
+}
+
+.swp-pagination span.swiper-pagination-bullet-active {
+    background: #ED5B1C;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    @apply hidden;
+}
