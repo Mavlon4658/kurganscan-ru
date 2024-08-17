@@ -64,3 +64,27 @@ let conditionParentSwp = new Swiper('.condition-parent-swp', {
         swiper: conditionChildSwp,
     },
 })
+
+let clientSwpChild = new Swiper('.client-child-swp', {
+    slidesPerView: 5,
+    spaceBetween: 7,
+    breakpoints: {
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 12,
+        }
+    }
+})
+
+let clientSwpParent = new Swiper('.client-swp-parent', {
+    slidesPerView: 1,
+    effect: 'fade',
+    loop: true,
+    navigation: {
+        nextEl: '.client-child-swp-next',
+        prevEl: '.client-child-swp-prev',
+    },
+    thumbs: {
+        swiper: clientSwpChild,
+    }
+})
