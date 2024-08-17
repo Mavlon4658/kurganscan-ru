@@ -21,3 +21,23 @@ barsBtn.onclick = () => {
         el.classList.toggle('hidden');
     })
 }
+
+let areaSwp = new Swiper('.area .swiper', {
+    slidesPerView: 1,
+    spaceBetween: 25,
+    breakpoints: {
+        1024: {
+            slidesPerView: 4,
+        },
+        700: {
+            slidesPerView: 3,
+        },
+        500: {
+            slidesPerView: 2,
+        },
+    },
+    pagination: {
+        el: '.area .swp-pagination',
+        clickable: true,
+    }
+})
