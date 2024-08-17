@@ -41,3 +41,26 @@ let areaSwp = new Swiper('.area .swiper', {
         clickable: true,
     }
 })
+
+let conditionChildSwp = new Swiper('.condition-child-swp', {
+    slidesPerView: 5,
+    spaceBetween: 7,
+    breakpoints: {
+        1024: {
+            spaceBetween: 11,
+        }
+    },
+})
+
+let conditionParentSwp = new Swiper('.condition-parent-swp', {
+    slidesPerView: 1,
+    effect: 'fade',
+    loop: true,
+    navigation: {
+        nextEl: '.condition-child-swp-next',
+        prevEl: '.condition-child-swp-prev',
+    },
+    thumbs: {
+        swiper: conditionChildSwp,
+    },
+})
