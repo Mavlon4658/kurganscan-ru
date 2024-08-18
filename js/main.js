@@ -15,11 +15,13 @@ let newSwp = new Swiper('.newSwp', {
 let barsBtn = document.querySelector('.bars_btn'),
     mobileMenu = document.querySelector('.mobile_menu');
 
-barsBtn.onclick = () => {
-    mobileMenu.classList.toggle('hidden');
-    barsBtn.querySelectorAll('img').forEach(el => {
-        el.classList.toggle('hidden');
-    })
+if (barsBtn) {
+    barsBtn.onclick = () => {
+        mobileMenu.classList.toggle('hidden');
+        barsBtn.querySelectorAll('img').forEach(el => {
+            el.classList.toggle('hidden');
+        })
+    }
 }
 
 let areaSwp = new Swiper('.area .swiper', {
@@ -86,5 +88,29 @@ let clientSwpParent = new Swiper('.client-swp-parent', {
     },
     thumbs: {
         swiper: clientSwpChild,
+    }
+})
+
+let modalSwpChild = new Swiper('.modal-child-swp', {
+    slidesPerView: 5,
+    spaceBetween: 7,
+    breakpoints: {
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 12,
+        }
+    }
+})
+
+let modalSwpParent = new Swiper('.modal-swp-parent', {
+    slidesPerView: 1,
+    effect: 'fade',
+    loop: true,
+    navigation: {
+        nextEl: '.modal-child-swp-next',
+        prevEl: '.modal-child-swp-prev',
+    },
+    thumbs: {
+        swiper: modalSwpChild,
     }
 })
