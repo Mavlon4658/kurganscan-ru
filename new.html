@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montaga&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Css file -->
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="font-montserrat font-normal text-blue-1">
+
+  <div class="wrapper">
+
+    <!-- Header -->
+    <header class="pt-3 lg:pt-5 pb-[22px] lg:pb-[25px]">
+        <div class="flex items-center justify-between lg:!mb-[15px] container">
+            <a href="/">
+                <img src="./images/logo.svg" alt="" class="h-14 lg:h-28">
+            </a>
+            <div class="flex items-center gap-20 xl:gap-[115.5px]">
+                <a href="tel:+79824240888" class="hidden lg:flex items-center gap-2">
+                    <img src="./images/phone-icon.svg" alt="">
+                    <span class="flex flex-col gap-[2px] text-blue-1">
+                        <span class=" text-[15px] tracking-[-2%]">Отдел продаж</span>
+                        <span class="font-bold">+7 (982) 42-40-888</span>
+                    </span>
+                </a>
+                <a href="tel:+79824242888" class="hidden lg:flex items-center gap-2">
+                    <img src="./images/phone-icon.svg" alt="">
+                    <span class="flex flex-col gap-[2px] text-blue-1">
+                        <span class=" text-[15px] tracking-[-2%]">Сервисный центр</span>
+                        <span class="font-bold">+7 (982) 42-42-888</span>
+                    </span>
+                </a>
+                <div class="flex items-center gap-[25px] shadow-[0_2px_3px_rgba(0,0,0,0.1)] p-[10px] rounded-[7px]">
+                    <div class="hidden xl:flex items-center gap-2">
+                        <img src="./images/clock-orange.svg" alt="">
+                        <p class="text-blue-0 text-sm tracking-[-2%]">
+                            <span class="font-bold">Пн-Вс:</span> 8:00–20:00
+                        </p>
+                    </div>
+                    <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                </div>
+            </div>
+            <button class="lg:hidden bars_btn">
+                <img src="./images/bars.svg" alt="">
+                <img src="./images/times.svg" alt="" class="hidden">
+            </button>
+        </div>
+        <ul class="bg-blue-1 rounded-[8px] hidden lg:flex items-center justify-center gap-8 xl:gap-[46.71px] py-[15px] text-sm text-white underline tracking-[-2%] container">
+            <li>
+                <a href="#">Главная</a>
+            </li>
+            <li>
+                <a href="#">Каталог техники</a>
+            </li>
+            <li>
+                <a href="#">В наличии</a>
+            </li>
+            <li>
+                <a href="#">Спецпредложения и акции</a>
+            </li>
+            <li>
+                <a href="#">Сервис</a>
+            </li>
+            <li>
+                <a href="#">Новости</a>
+            </li>
+            <li>
+                <a href="#">Вакансии</a>
+            </li>
+            <li>
+                <a href="#">Контакты</a>
+            </li>
+        </ul>
+    </header>
+    <!-- Header end -->
+
+    <!-- Mobile menu -->
+    <section class="absolute w-full top-20 left-0 z-10 text-white lg:hidden hidden mobile_menu">
+        <div class="container bg-blue-1 rounded-lg p-[25px] flex flex-col gap-[25px]">
+            <ul class="flex flex-col gap-5 text-lg font-light underline leading-[22px] tracking-[-0.2px]">
+                <li>
+                    <a href="#">Главная</a>
+                </li>
+                <li>
+                    <a href="#">Каталог техники</a>
+                </li>
+                <li>
+                    <a href="#">В наличии</a>
+                </li>
+                <li>
+                    <a href="#">Спецпредложения и акции</a>
+                </li>
+                <li>
+                    <a href="#">Сервис</a>
+                </li>
+                <li>
+                    <a href="#">Новости</a>
+                </li>
+                <li>
+                    <a href="#">Вакансии</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+            <div class="bg-blue-2 h-[1px] w-full"></div>
+            <div class="w-full bg-blue-6 flex flex-col gap-[25px] rounded-lg p-3">
+                <a href="tel:+79824240888" class="flex items-center gap-2">
+                    <img src="./images/phone-icon.svg" alt="">
+                    <span class="flex flex-col gap-[2px] text-blue-1">
+                        <span class=" text-[15px] tracking-[-2%]">Отдел продаж</span>
+                        <span class="font-bold">+7 (982) 42-40-888</span>
+                    </span>
+                </a>
+                <a href="tel:+79824242888" class="flex items-center gap-2">
+                    <img src="./images/phone-icon.svg" alt="">
+                    <span class="flex flex-col gap-[2px] text-blue-1">
+                        <span class=" text-[15px] tracking-[-2%]">Сервисный центр</span>
+                        <span class="font-bold">+7 (982) 42-42-888</span>
+                    </span>
+                </a>
+            </div>
+            <a href="#" class="font-base font-bold leading-5 tracking-[-0.2px] text-blue-6">info@kurganscan.ru</a>
+        </div>
+    </section>
+    <!-- Mobile menu end -->
+
+    <!-- breadcrumbs -->
+    <div class="lg:max-w-[856px] max-w-[calc(100%_-_24px)] mx-auto">
+      <ul class="breadcrumbs rounded-lg bg-blue-6 lg:py-[15px] py-[10px] lg:px-[30px] px-[15px] flex flex-wrap items-center lg:gap-[25px] gap-x-[10px] gap-y-[5px] lg:mb-[50px] mb-[25px]">
+        <li>
+          <a href="/" class="text-xs leading-[14px] text-blue-2">
+            Главная
+          </a>
+        </li>
+        <li>
+          <img class="flex-shrink-0 lg:w-auto w-[6px]" src="./images/breadcrumbs_icon.svg" alt="">
+        </li>
+        <li>
+          <a href="#" class="text-xs leading-[14px] text-blue-2">
+            Новости
+          </a>
+        </li>
+        <li>
+          <img class="flex-shrink-0 lg:w-auto w-[6px]" src="./images/breadcrumbs_icon.svg" alt="">
+        </li>
+        <li>
+          <span class="text-xs leading-[14px] text-blue-2">
+            Новость про автомобили и автоконцерн HOWO. Заглавная. Одна из последних
+          </span>
+        </li>
+      </ul>
+    </div>
+    <!-- breadcrumbs -->
+
+    <main>
+
+      <!-- new -->
+      <section class="lg:mb-[50px] mb-[25px]">
+        <div class="lg:max-w-[856px] max-w-[calc(100%_-_24px)] mx-auto lg:mb-[50px] mb-[25px]">
+          <div class="flex flex-col lg:gap-[25px] gap-[15px] lg:mb-[25px] mb-[15px]">
+            <div>
+              <span class="text-xs text-blue-1">
+                11.06.2024 / HOWO
+              </span>
+              <h1 class="font-bold lg:text-[28px] text-[22px] leading-[26px] lg:leading-[34px] text-blue-1 mt-[10px]">
+                Новость про автомобили и автоконцерн HOWO. Заглавная. Одна из последних
+              </h1>
+            </div>
+            <p class="text-blue-1 text-sm leading-[18px]">
+              Автоконцерн HOWO, или China National Heavy Duty Truck Group, является одним из ведущих производителей тяжелых грузовиков в Китае. Основанная в 1956 году, компания прошла долгий путь от небольшого производства до крупного игрока на мировом рынке грузовой техники.
+            </p>
+            <img class="w-full rounded-lg" src="./images/new_img.png" alt="">
+          </div>
+          <div class="flex flex-col lg:gap-[22px] gap-[15px]">
+            <h6 class="font-bold text-blue-1 text-[22px] leading-[26px]">
+              История и развитие
+            </h6>
+            <p class="text-blue-1 text-sm leading-[18px]">
+              HOWO начала свою деятельность с производства военной техники и тракторов. За последние десятилетия компания значительно расширила свои возможности и ассортимент продукции.
+            </p>
+            <ul class="flex flex-col gap-[6px] list-inside">
+              <h6 class="text-blue-1 text-sm leading-[18px] font-bold">
+                Основные этапы развития:
+              </h6>
+              <li class="text-blue-1 text-sm leading-[18px] list-decimal">
+                1956-1978: Основание и первые годы.
+              </li>
+              <li class="text-blue-1 text-sm leading-[18px] list-decimal">
+                1980-1990: Расширение ассортимента, начало производства коммерческих грузовиков.
+              </li>
+              <li class="text-blue-1 text-sm leading-[18px] list-decimal">
+                1990-2000: Внедрение новых технологий и сотрудничество с иностранными партнёрами.
+              </li>
+              <li class="text-blue-1 text-sm leading-[18px] list-decimal">
+                2000-настоящее время: Укрепление позиций на мировом рынке, экспансия в Европу и Африку
+              </li>
+            </ul>
+            <h6 class="font-bold text-blue-1 text-[22px] leading-[26px]">
+              Ассортимент продукции
+            </h6>
+            <p class="text-blue-1 text-sm leading-[18px]">
+              HOWO предлагает широкий спектр тяжелых грузовиков и <a href="#" class="font-bold text-orange-1 underline">сопутствующего оборудования</a>. Вся продукция отличается высоким качеством и надежностью, что позволяет компании конкурировать с мировыми лидерами отрасли.
+            </p>
+            <ul class="flex flex-col gap-[6px] list-inside">
+              <h6 class="text-blue-1 text-sm leading-[18px] font-bold">
+                Продуктовая линейка включает:
+              </h6>
+              <li class="text-blue-1 text-sm leading-[18px] list-disc">
+                Тягачи
+              </li>
+              <li class="text-blue-1 text-sm leading-[18px] list-disc">
+                Самосвалы
+              </li>
+              <li class="text-blue-1 text-sm leading-[18px] list-disc">
+                Специализированные грузовики (цементовозы, автоцистерны)
+              </li>
+              <li class="text-blue-1 text-sm leading-[18px] list-disc">
+                Запчасти и компоненты
+              </li>
+            </ul>
+            <div class="flex items-stretch border-[1px] flex-col md:flex-row rounded-lg border-blue-4">
+              <div class="md:border-r-[1px] border-r-0 border-blue-4 md:w-[calc(100%_/_4)] w-full">
+                <h6 class="font-semibold text-blue-1 text-xs leading-[15px] py-[10px] px-[12px]">
+                  Модель
+                </h6>
+                <p class="border-t-[1px] border-blue-4 py-[10px] px-[12px] font-normal text-xs text-blue-2 leading-[15px]">
+                  HOWO A7 
+                </p>
+                <p class="border-t-[1px] border-blue-4 py-[10px] px-[12px] font-normal text-xs text-blue-2 leading-[15px]">
+                  HOWO T5G
+                </p>
+              </div>
+              <div class="md:border-r-[1px] border-r-0 border-blue-4 md:w-[calc(100%_/_4)] w-full">
+                <h6 class="border-t-[1px] md:border-none border-blue-4 font-semibold text-blue-1 text-xs leading-[15px] py-[10px] px-[12px]">
+                  Грузоподъемность
+                </h6>
+                <p class="border-t-[1px] border-blue-4 py-[10px] px-[12px] font-normal text-xs text-blue-2 leading-[15px]">
+                  до 40 тонн
+                </p>
+                <p class="border-t-[1px] border-blue-4 py-[10px] px-[12px] font-normal text-xs text-blue-2 leading-[15px]">
+                  до 30 тонн
+                </p>
+              </div>
+              <div class="md:border-r-[1px] border-r-0 border-blue-4 md:w-[calc(100%_/_4)] w-full">
+                <h6 class="border-t-[1px] md:border-none border-blue-4 font-semibold text-blue-1 text-xs leading-[15px] py-[10px] px-[12px]">
+                  Мощность двигателя
+                </h6>
+                <p class="border-t-[1px] border-blue-4 py-[10px] px-[12px] font-normal text-xs text-blue-2 leading-[15px]">
+                  380-420 л.с.
+                </p>
+                <p class="border-t-[1px] border-blue-4 py-[10px] px-[12px] font-normal text-xs text-blue-2 leading-[15px]">
+                  290-340 л.с.
+                </p>
+              </div>
+              <div class="md:w-[calc(100%_/_4)] w-full">
+                <h6 class="border-t-[1px] md:border-none font-semibold text-blue-1 text-xs leading-[15px] py-[10px] px-[12px]">
+                  Предназначение
+                </h6>
+                <p class="border-t-[1px] border-blue-4 py-[10px] px-[12px] font-normal text-xs text-blue-2 leading-[15px]">
+                  На дальние расстояния
+                </p>
+                <p class="border-t-[1px] border-blue-4 py-[10px] px-[12px] font-normal text-xs text-blue-2 leading-[15px]">
+                  Средние и короткие
+                </p>
+              </div>
+            </div>
+            <p class="text-blue-1 text-sm leading-[18px]">
+              HOWO активно развивает свои международные связи и внедряет инновационные технологии, чтобы соответствовать современным требованиям и ожиданиям клиентов. Важным направлением развития является устойчивое развитие и забота об экологии.
+            </p>
+            <div>
+              <h6 class="text-blue-1 text-sm leading-[18px] font-bold mb-[8px]">
+                Цитата генерального директора HOWO:
+              </h6>
+              <blockquote class="flex items-center gap-[10px] py-[10px] px-[15px] bg-blue-6 rounded-lg">
+                <img class="lg:w-auto lg:h-auto w-[40px] h-[40px]" src="./images/quote_icon.svg" alt="">
+                <p class="font-medium italic text-sm text-blue-1">
+                  Наши грузовики разрабатываются с учетом самых высоких стандартов качества и безопасности. Мы стремимся стать лидером не только в Китае, но и на мировом рынке.
+                </p>
+              </blockquote>
+            </div>
+            <p class="text-blue-1 text-sm leading-[18px]">
+              Автоконцерн HOWO зарекомендовал себя как надежного и профессионального производителя грузовой техники. С богатой историей и амбициозными планами на будущее, компания продолжает укреплять свои позиции на рынке и завоевывать доверие клиентов по всему миру.
+            </p>
+          </div>
+        </div>
+        <div class="container rounded-lg bg-blue-6 lg:py-[25px] lg:px-[25px] p-[15px]">
+          <h1 class="font-bold lg:text-[28px] text-[22px] leading-[26px] lg:leading-[34px] text-blue-1 lg:mb-[25px] mb-[20px]">
+            Другие новости
+          </h1>
+          <div class="flex flex-col lg:flex-row flex-wrap lg:gap-[17px] gap-[15px]">
+            <a href="#" class="flex flex-col md:flex-col lg:gap-[15px] gap-[10px] w-full lg:w-[calc(100%_/_3_-_12px)]">
+              <img class="w-full rounded-lg" src="./images/new_card1.png" alt="">
+              <div class="flex flex-col lg:gap-[15px] gap-[5px]">
+                <span class="text-xs text-blue-2">
+                  12.06.2024 / HOWO
+                </span>
+                <p class="font-bold text-xs text-blue-1">
+                  Новость про автомобили и автоконцерн HOWO. Заглавная. Одна из последних
+                </p>
+              </div>
+            </a>
+            <a href="#" class="flex flex-col md:flex-col gap-[15px] w-full lg:w-[calc(100%_/_3_-_12px)]">
+              <img class="w-full rounded-lg" src="./images/new_card2.png" alt="">
+              <div class="flex flex-col gap-[15px]">
+                <span class="text-xs text-blue-2">
+                  12.06.2024 / SITRAK
+                </span>
+                <p class="font-bold text-xs text-blue-1">
+                  Новость про автомобили и автоконцерн SITRAK. Заглавная. Одна из последних
+                </p>
+              </div>
+            </a>
+            <a href="#" class="flex flex-col md:flex-col gap-[15px] w-full lg:w-[calc(100%_/_3_-_12px)]">
+              <img class="w-full rounded-lg" src="./images/new_card2.png" alt="">
+              <div class="flex flex-col gap-[15px]">
+                <span class="text-xs text-blue-2">
+                  12.06.2024 / HOWO
+                </span>
+                <p class="font-bold text-xs text-blue-1">
+                  Внутрикорпоративная новость КурганСкан. Одна из последних. Может быть в 3 строки
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- new -->
+
+      <!-- Contact -->
+      <section class="mb-[50px] lg:mb-[25px]">
+          <div class="container lg:pl-[110px] relative">
+              <div class="bg-blue-6 border border-blue-4 border-solid rounded-xl w-full lg:w-[361px] lg:absolute top-[60px] left-0 pt-[33px] px-[22px] pb-[22px] lg:pb-[43px] mb-[15px] lg:mb-0">
+                  <div class="flex items-center justify-between mb-9">
+                      <h2 class="text-[22px] leading-[27px] font-bold tracking-[-0.2px]">АДРЕС И <br> КОНТАКТЫ</h2>
+                      <a href="#" class="flex items-center gap-3 text-xs leading-3 px-2 py-3 border border-blue-3 border-solid rounded">
+                          <img src="./images/yandex-navigation-icon.svg" alt="">
+                          <span>Построить <br> маршрут</span>
+                      </a>
+                  </div>
+                  <p class="text-[10px] leading-[18px] max-w-[295px] mb-[25px]">
+                      250 км трассы Курган-Челябинск Р-254 "Иртыш"
+                      <span class="font-bold block">641322, Курганская обл., Кетовский р-н, c. Введенское, ул. Сибирская д.1,</span>
+                  </p>
+                  <div class="flex flex-col gap-3">
+                      <a href="tel:+79824240888" class="flex items-center gap-[10px] p-[10px]">
+                          <img src="./images/phone-icon.svg" alt="" class="w-7">
+                          <span class="flex flex-col gap-1">
+                              <span class="text-sm leading-[17px]">Отдел продаж</span>
+                              <span class="text-lg leading-[22px] font-bold">+7 (982) 42-40-888</span>
+                          </span>
+                      </a>
+                      <a href="tel:+79824242888" class="flex items-center gap-[10px] p-[10px]">
+                          <img src="./images/phone-icon.svg" alt="" class="w-7">
+                          <span class="flex flex-col gap-1">
+                              <span class="text-sm leading-[17px]">Сервисный центр</span>
+                              <span class="text-lg leading-[22px] font-bold">+7 (982) 42-42-888</span>
+                          </span>
+                      </a>
+                      <div class="flex items-start gap-2 p-[10px]">
+                          <img src="./images/clock-orange.svg" alt="" class="w-7">
+                          <div class="flex flex-col gap-[14px]">
+                              <p class="text-lg leading-[22px] pt-[3px]">
+                                  <span class="font-bold">Пн-Вс:</span> 8:00–20:00
+                              </p>
+                              <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <iframe class="w-full h-[488px] lg:h-[615px] border border-blue-5 border-solid rounded-xl overflow-hidden" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aade349a3abf9cc2a949253de085fcece706700e80e253cf86aa7c7081f384d0b&amp;source=constructor" frameborder="0"></iframe>
+          </div>
+      </section>
+      <!-- Contact end -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="pb-[58px]">
+        <div class="container">
+            <img src="./images/footer-line.svg" alt="" class="w-full block mb-[25px] lg:mb-[30px]">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-[25px]">
+                <div>
+                    <p class="text-sm leading-[17px] tracking-[-0.2px] mb-2 lg:mb-[15px]">
+                        <span class="font-bold">КУРГАНСКАН ©</span> / 2024
+                    </p>
+                    <p class="text-blue-4 text-xs lg:text-sm leading-2 lg:leading-[10px]">Официальный дилер. Продажа техники и сервис.</p>
+                </div>
+                <div>
+                    <ul class="flex items-center flex-wrap lg:justify-end gap-y-1 gap-x-3 mb-[15px]">
+                        <li>
+                            <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Политика конфиденциальности</a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Правила сайта</a>
+                        </li>
+                        <li>
+                            <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Договор оферты</a>
+                        </li>
+                    </ul>
+                    <p class="text-blue-4 text-xs lg:text-sm lg:leading-[10px] text-start lg:text-end">Обращаем Ваше внимание на то, что все предложения на сайте не являются публичной офертой.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- JS file -->
+  <script src="./js/main.js"></script>
+
+</body>
+</html>
