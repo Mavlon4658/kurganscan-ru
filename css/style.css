@@ -21,11 +21,15 @@
 }
 
 .btn-blue-sm {
-    @apply bg-blue-1 text-white h-[34px] rounded-[8px] inline-flex items-center justify-center px-3 text-xs lg:text-sm tracking-[-4%]
+    @apply bg-blue-1 text-white h-[37px] lg:h-[34px] rounded-[8px] inline-flex items-center justify-center px-3 text-xs lg:text-sm tracking-[-4%]
 }
 
 .btn-blue {
     @apply bg-blue-1 text-white flex items-center justify-center gap-[10px] text-lg leading-[13px] tracking-[-0.6px] w-[240px] h-[55px] rounded-[12px];
+}
+
+.btn-lightblue {
+    @apply w-full h-[37px] lg:h-[34px] flex items-center justify-center rounded-lg bg-blue-4 text-[10px] lg:text-sm font-bold lg:font-normal
 }
 
 .swp-pagination {

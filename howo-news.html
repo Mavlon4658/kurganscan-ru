@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montaga&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Css file -->
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="font-montserrat font-normal text-blue-1">
+
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="pt-3 lg:pt-5 pb-[22px] lg:pb-[25px]">
+            <div class="flex items-center justify-between lg:!mb-[15px] container">
+                <a href="/">
+                    <img src="./images/logo.svg" alt="" class="h-14 lg:h-28">
+                </a>
+                <div class="flex items-center gap-20 xl:gap-[115.5px]">
+                    <a href="tel:+79824240888" class="hidden lg:flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Отдел продаж</span>
+                            <span class="font-bold">+7 (982) 42-40-888</span>
+                        </span>
+                    </a>
+                    <a href="tel:+79824242888" class="hidden lg:flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Сервисный центр</span>
+                            <span class="font-bold">+7 (982) 42-42-888</span>
+                        </span>
+                    </a>
+                    <div class="flex items-center gap-[25px] shadow-[0_2px_3px_rgba(0,0,0,0.1)] p-[10px] rounded-[7px]">
+                        <div class="hidden xl:flex items-center gap-2">
+                            <img src="./images/clock-orange.svg" alt="">
+                            <p class="text-blue-0 text-sm tracking-[-2%]">
+                                <span class="font-bold">Пн-Вс:</span> 8:00–20:00
+                            </p>
+                        </div>
+                        <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                    </div>
+                </div>
+                <button class="lg:hidden bars_btn">
+                    <img src="./images/bars.svg" alt="">
+                    <img src="./images/times.svg" alt="" class="hidden">
+                </button>
+            </div>
+            <ul class="bg-blue-1 rounded-[8px] hidden lg:flex items-center justify-center gap-8 xl:gap-[46.71px] py-[15px] text-sm text-white underline tracking-[-2%] container">
+                <li>
+                    <a href="#">Главная</a>
+                </li>
+                <li>
+                    <a href="#">Каталог техники</a>
+                </li>
+                <li>
+                    <a href="#">В наличии</a>
+                </li>
+                <li>
+                    <a href="#">Спецпредложения и акции</a>
+                </li>
+                <li>
+                    <a href="#">Сервис</a>
+                </li>
+                <li>
+                    <a href="#">Новости</a>
+                </li>
+                <li>
+                    <a href="#">Вакансии</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </header>
+        <!-- Header end -->
+
+        <!-- Mobile menu -->
+        <section class="absolute w-full top-20 left-0 z-10 text-white lg:hidden hidden mobile_menu">
+            <div class="container bg-blue-1 rounded-lg p-[25px] flex flex-col gap-[25px]">
+                <ul class="flex flex-col gap-5 text-lg font-light underline leading-[22px] tracking-[-0.2px]">
+                    <li>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#">Каталог техники</a>
+                    </li>
+                    <li>
+                        <a href="#">В наличии</a>
+                    </li>
+                    <li>
+                        <a href="#">Спецпредложения и акции</a>
+                    </li>
+                    <li>
+                        <a href="#">Сервис</a>
+                    </li>
+                    <li>
+                        <a href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#">Вакансии</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="bg-blue-2 h-[1px] w-full"></div>
+                <div class="w-full bg-blue-6 flex flex-col gap-[25px] rounded-lg p-3">
+                    <a href="tel:+79824240888" class="flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Отдел продаж</span>
+                            <span class="font-bold">+7 (982) 42-40-888</span>
+                        </span>
+                    </a>
+                    <a href="tel:+79824242888" class="flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Сервисный центр</span>
+                            <span class="font-bold">+7 (982) 42-42-888</span>
+                        </span>
+                    </a>
+                </div>
+                <a href="#" class="font-base font-bold leading-5 tracking-[-0.2px] text-blue-6">info@kurganscan.ru</a>
+            </div>
+        </section>
+        <!-- Mobile menu end -->
+
+        <main>
+
+            <!-- Home -->
+            <section class="mb-[60px] lg:mb-[25px]">
+                <div class="relative z-[1] h-[180px] rounded-lg overflow-hidden container">
+                    <img src="./images/howo-news-home-bg.jpeg" alt="" class="absolute z-[-1] top-0 left-0 w-full h-full">
+                    <div class="absolute top-0 left-0 h-full w-full bg-[#0b112899] backdrop-blur-[2px] flex flex-col justify-center text-white px-[29px] lg:px-[50px]">
+                        <ul class="flex items-center justify-center lg:justify-start gap-[26px] mb-[17px] pt-4 text-xs tracking-[-0.2px] text-blue-6">
+                            <li>
+                                <a href="#">Главная</a>
+                            </li>
+                            <li>
+                                <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7.36317 7.81768C7.72176 8.20189 7.72176 8.79811 7.36317 9.18232L1 16" stroke="#A3B7C9" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="#">Новости</a>
+                            </li>
+                            <li>
+                                <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7.36317 7.81768C7.72176 8.20189 7.72176 8.79811 7.36317 9.18232L1 16" stroke="#A3B7C9" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <span class="text-blue-4">HOWO</span>
+                            </li>
+                        </ul>
+                        <h2 class="font-extrabold text-[26px] lg:text-[52px] tracking-[-0.9px] lg:tracking-[-1px] leading-8 lg:leading-[63px] text-center lg:text-start">Новости HOWO</h2>
+                    </div>
+                </div>
+            </section>
+            <!-- Home end -->
+
+            <section class="mb-[60px] lg:mb-[75px]">
+                <div class="container">
+                    <ul class="flex items-stretch gap-6 mb-[75px] overflow-y-scroll lg:overflow-y-hidden scrollbar-hide w-[calc(100%_+_24px)] -ml-3 lg:ml-0 px-3 lg:px-0">
+                        <li class="w-[300px] md:w-[350px] lg:w-[calc(100%_/_3_-_16px)] flex-shrink-0 flex flex-col justify-between gap-[25px] border border-blue-4 border-solid p-3 rounded-lg">
+                            <div>
+                                <div class="w-full h-[205px] rounded-lg overflow-hidden mb-[25px]">
+                                    <img src="./images/howo-new-1.jpeg" alt="" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="text-sm lg:text-lg leading-4 lg:leading-6 font-bold">Новость про автомобили и автоконцерн HOWO. Заглавная. Одна из последних</h3>
+                            </div>
+                            <p class="text-xs lg:text-sm leading-[10px] tracking-[-0.2px]">
+                                11.06.2024 / <span class="font-bold">HOWO</span>
+                            </p>
+                        </li>
+                        <li class="w-[300px] md:w-[350px] lg:w-[calc(100%_/_3_-_16px)] flex-shrink-0 flex flex-col justify-between gap-[25px] border border-blue-4 border-solid p-3 rounded-lg">
+                            <div>
+                                <div class="w-full h-[205px] rounded-lg overflow-hidden mb-[25px]">
+                                    <img src="./images/howo-new-2.jpeg" alt="" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="text-sm lg:text-lg leading-4 lg:leading-6 font-bold">Внутрикорпоративная новость КурганСкан. Одна из последних. Может быть в 3 строки</h3>
+                            </div>
+                            <p class="text-xs lg:text-sm leading-[10px] tracking-[-0.2px]">
+                                11.06.2024 / <span class="font-bold">HOWO</span>
+                            </p>
+                        </li>
+                        <li class="w-[300px] md:w-[350px] lg:w-[calc(100%_/_3_-_16px)] flex-shrink-0 flex flex-col justify-between gap-[25px] border border-blue-4 border-solid p-3 rounded-lg">
+                            <div>
+                                <div class="w-full h-[205px] rounded-lg overflow-hidden mb-[25px]">
+                                    <img src="./images/howo-new-3.jpeg" alt="" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="text-sm lg:text-lg leading-4 lg:leading-6 font-bold">Новость про автомобили и автоконцерн SITRAK. Заглавная. Одна из последних</h3>
+                            </div>
+                            <p class="text-xs lg:text-sm leading-[10px] tracking-[-0.2px]">
+                                09.06.2024 / <span class="font-bold">HOWO</span>
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-col gap-4 lg:gap-[25px] lg:pl-[110px] mb-[50px]">
+                        <li class="flex items-start lg:items-center gap-[25px] w-full lg:w-[856px] bg-blue-6 lg:bg-transparent p-3 lg:p-0 rounded-lg lg:rounded-none">
+                            <div class="w-[70px] lg:w-[305px] h-[70px] lg:h-[160px] rounded-lg overflow-hidden flex-shrink-0">
+                                <img src="./images/new-card-1.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-xs lg:text-sm leading-[10px] lg:leading-[10px] mb-[15px]">12.06.2024 / HOWO</p>
+                                <h3 class="text-sm lg:text-lg leading-[18px] lg:leading-[26px] tracking-[-0.2px] font-bold">Новость про автомобили и автоконцерн HOWO. Заглавная. Одна из последних</h3>
+                            </div>
+                        </li>
+                        <li class="flex items-start lg:items-center gap-[25px] w-full lg:w-[856px] bg-blue-6 lg:bg-transparent p-3 lg:p-0 rounded-lg lg:rounded-none">
+                            <div class="w-[70px] lg:w-[305px] h-[70px] lg:h-[160px] rounded-lg overflow-hidden flex-shrink-0">
+                                <img src="./images/new-card-2.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-xs lg:text-sm leading-[10px] lg:leading-[10px] mb-[15px]">12.06.2024 / HOWO</p>
+                                <h3 class="text-sm lg:text-lg leading-[18px] lg:leading-[26px] tracking-[-0.2px] font-bold">Новость про автомобили и автоконцерн HOWO. Заглавная. Одна из последних</h3>
+                            </div>
+                        </li>
+                        <li class="flex items-start lg:items-center gap-[25px] w-full lg:w-[856px] bg-blue-6 lg:bg-transparent p-3 lg:p-0 rounded-lg lg:rounded-none">
+                            <div class="w-[70px] lg:w-[305px] h-[70px] lg:h-[160px] rounded-lg overflow-hidden flex-shrink-0">
+                                <img src="./images/new-card-3.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-xs lg:text-sm leading-[10px] lg:leading-[10px] mb-[15px]">12.06.2024 / HOWO</p>
+                                <h3 class="text-sm lg:text-lg leading-[18px] lg:leading-[26px] tracking-[-0.2px] font-bold">Внутрикорпоративная новость HOWO. Одна из последних. Может быть в 3 строки</h3>
+                            </div>
+                        </li>
+                        <li class="flex items-start lg:items-center gap-[25px] w-full lg:w-[856px] bg-blue-6 lg:bg-transparent p-3 lg:p-0 rounded-lg lg:rounded-none">
+                            <div class="w-[70px] lg:w-[305px] h-[70px] lg:h-[160px] rounded-lg overflow-hidden flex-shrink-0">
+                                <img src="./images/new-card-4.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-xs lg:text-sm leading-[10px] lg:leading-[10px] mb-[15px]">12.06.2024 / HOWO</p>
+                                <h3 class="text-sm lg:text-lg leading-[18px] lg:leading-[26px] tracking-[-0.2px] font-bold">Новость про автомобили и автоконцерн HOWO. Заглавная. Одна из последних</h3>
+                            </div>
+                        </li>
+                        <li class="flex items-start lg:items-center gap-[25px] w-full lg:w-[856px] bg-blue-6 lg:bg-transparent p-3 lg:p-0 rounded-lg lg:rounded-none">
+                            <div class="w-[70px] lg:w-[305px] h-[70px] lg:h-[160px] rounded-lg overflow-hidden flex-shrink-0">
+                                <img src="./images/new-card-5.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-xs lg:text-sm leading-[10px] lg:leading-[10px] mb-[15px]">12.06.2024 / HOWO</p>
+                                <h3 class="text-sm lg:text-lg leading-[18px] lg:leading-[26px] tracking-[-0.2px] font-bold">Новость про автомобили и автоконцерн HOWO. Заглавная. Одна из последних</h3>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="flex justify-center items-center gap-[6px]">
+                        <li>
+                            <a href="#" class="w-[45px] h-[45px] rounded-full flex items-center justify-center text-xs font-bold bg-blue-5">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="w-[45px] h-[45px] rounded-full flex items-center justify-center text-xs font-bold border border-blue-4 hover:bg-blue-5">2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="w-[45px] h-[45px] rounded-full flex items-center justify-center text-xs font-bold border border-blue-4 hover:bg-blue-5">3</a>
+                        </li>
+                        <li>
+                            <a href="#" class="w-[45px] h-[45px] rounded-full flex items-center justify-center text-xs font-bold border border-blue-4 hover:bg-blue-5">4</a>
+                        </li>
+                        <li>
+                            <a href="#" class="w-[45px] h-[45px] rounded-full flex items-center justify-center text-xs font-bold border border-blue-4 hover:bg-blue-5">12</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="mb-[50px] lg:mb-[25px]">
+                <div class="container lg:pl-[110px] relative">
+                    <div class="bg-blue-6 border border-blue-4 border-solid rounded-xl w-full lg:w-[361px] lg:absolute top-[60px] left-0 pt-[33px] px-[22px] pb-[22px] lg:pb-[43px] mb-[15px] lg:mb-0">
+                        <div class="flex items-center justify-between mb-9">
+                            <h2 class="text-[22px] leading-[27px] font-bold tracking-[-0.2px]">АДРЕС И <br> КОНТАКТЫ</h2>
+                            <a href="#" class="flex items-center gap-3 text-xs leading-3 px-2 py-3 border border-blue-3 border-solid rounded">
+                                <img src="./images/yandex-navigation-icon.svg" alt="">
+                                <span>Построить <br> маршрут</span>
+                            </a>
+                        </div>
+                        <p class="text-[10px] leading-[18px] max-w-[295px] mb-[25px]">
+                            250 км трассы Курган-Челябинск Р-254 "Иртыш"
+                            <span class="font-bold block">641322, Курганская обл., Кетовский р-н, c. Введенское, ул. Сибирская д.1,</span>
+                        </p>
+                        <div class="flex flex-col gap-3">
+                            <a href="tel:+79824240888" class="flex items-center gap-[10px] p-[10px]">
+                                <img src="./images/phone-icon.svg" alt="" class="w-7">
+                                <span class="flex flex-col gap-1">
+                                    <span class="text-sm leading-[17px]">Отдел продаж</span>
+                                    <span class="text-lg leading-[22px] font-bold">+7 (982) 42-40-888</span>
+                                </span>
+                            </a>
+                            <a href="tel:+79824242888" class="flex items-center gap-[10px] p-[10px]">
+                                <img src="./images/phone-icon.svg" alt="" class="w-7">
+                                <span class="flex flex-col gap-1">
+                                    <span class="text-sm leading-[17px]">Сервисный центр</span>
+                                    <span class="text-lg leading-[22px] font-bold">+7 (982) 42-42-888</span>
+                                </span>
+                            </a>
+                            <div class="flex items-start gap-2 p-[10px]">
+                                <img src="./images/clock-orange.svg" alt="" class="w-7">
+                                <div class="flex flex-col gap-[14px]">
+                                    <p class="text-lg leading-[22px] pt-[3px]">
+                                        <span class="font-bold">Пн-Вс:</span> 8:00–20:00
+                                    </p>
+                                    <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <iframe class="w-full h-[488px] lg:h-[615px] border border-blue-5 border-solid rounded-xl overflow-hidden" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aade349a3abf9cc2a949253de085fcece706700e80e253cf86aa7c7081f384d0b&amp;source=constructor" frameborder="0"></iframe>
+                </div>
+            </section>
+            <!-- Contact end -->
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="pb-[58px]">
+            <div class="container">
+                <img src="./images/footer-line.svg" alt="" class="w-full block mb-[25px] lg:mb-[30px]">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-[25px]">
+                    <div>
+                        <p class="text-sm leading-[17px] tracking-[-0.2px] mb-2 lg:mb-[15px]">
+                            <span class="font-bold">КУРГАНСКАН ©</span> / 2024
+                        </p>
+                        <p class="text-blue-4 text-xs lg:text-sm leading-2 lg:leading-[10px]">Официальный дилер. Продажа техники и сервис.</p>
+                    </div>
+                    <div>
+                        <ul class="flex items-center flex-wrap lg:justify-end gap-y-1 gap-x-3 mb-[15px]">
+                            <li>
+                                <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Политика конфиденциальности</a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Правила сайта</a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Договор оферты</a>
+                            </li>
+                        </ul>
+                        <p class="text-blue-4 text-xs lg:text-sm lg:leading-[10px] text-start lg:text-end">Обращаем Ваше внимание на то, что все предложения на сайте не являются публичной офертой.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS file -->
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

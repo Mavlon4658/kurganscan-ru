@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montaga&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Css file -->
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="font-montserrat font-normal text-blue-1">
+
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="pt-3 lg:pt-5 pb-[22px] lg:pb-[25px]">
+            <div class="flex items-center justify-between lg:!mb-[15px] container">
+                <a href="/">
+                    <img src="./images/logo.svg" alt="" class="h-14 lg:h-28">
+                </a>
+                <div class="flex items-center gap-20 xl:gap-[115.5px]">
+                    <a href="tel:+79824240888" class="hidden lg:flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Отдел продаж</span>
+                            <span class="font-bold">+7 (982) 42-40-888</span>
+                        </span>
+                    </a>
+                    <a href="tel:+79824242888" class="hidden lg:flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Сервисный центр</span>
+                            <span class="font-bold">+7 (982) 42-42-888</span>
+                        </span>
+                    </a>
+                    <div class="flex items-center gap-[25px] shadow-[0_2px_3px_rgba(0,0,0,0.1)] p-[10px] rounded-[7px]">
+                        <div class="hidden xl:flex items-center gap-2">
+                            <img src="./images/clock-orange.svg" alt="">
+                            <p class="text-blue-0 text-sm tracking-[-2%]">
+                                <span class="font-bold">Пн-Вс:</span> 8:00–20:00
+                            </p>
+                        </div>
+                        <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                    </div>
+                </div>
+                <button class="lg:hidden bars_btn">
+                    <img src="./images/bars.svg" alt="">
+                    <img src="./images/times.svg" alt="" class="hidden">
+                </button>
+            </div>
+            <ul class="bg-blue-1 rounded-[8px] hidden lg:flex items-center justify-center gap-8 xl:gap-[46.71px] py-[15px] text-sm text-white underline tracking-[-2%] container">
+                <li>
+                    <a href="#">Главная</a>
+                </li>
+                <li>
+                    <a href="#">Каталог техники</a>
+                </li>
+                <li>
+                    <a href="#">В наличии</a>
+                </li>
+                <li>
+                    <a href="#">Спецпредложения и акции</a>
+                </li>
+                <li>
+                    <a href="#">Сервис</a>
+                </li>
+                <li>
+                    <a href="#">Новости</a>
+                </li>
+                <li>
+                    <a href="#">Вакансии</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </header>
+        <!-- Header end -->
+
+        <!-- Mobile menu -->
+        <section class="absolute w-full top-20 left-0 z-10 text-white lg:hidden hidden mobile_menu">
+            <div class="container bg-blue-1 rounded-lg p-[25px] flex flex-col gap-[25px]">
+                <ul class="flex flex-col gap-5 text-lg font-light underline leading-[22px] tracking-[-0.2px]">
+                    <li>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#">Каталог техники</a>
+                    </li>
+                    <li>
+                        <a href="#">В наличии</a>
+                    </li>
+                    <li>
+                        <a href="#">Спецпредложения и акции</a>
+                    </li>
+                    <li>
+                        <a href="#">Сервис</a>
+                    </li>
+                    <li>
+                        <a href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#">Вакансии</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="bg-blue-2 h-[1px] w-full"></div>
+                <div class="w-full bg-blue-6 flex flex-col gap-[25px] rounded-lg p-3">
+                    <a href="tel:+79824240888" class="flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Отдел продаж</span>
+                            <span class="font-bold">+7 (982) 42-40-888</span>
+                        </span>
+                    </a>
+                    <a href="tel:+79824242888" class="flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Сервисный центр</span>
+                            <span class="font-bold">+7 (982) 42-42-888</span>
+                        </span>
+                    </a>
+                </div>
+                <a href="#" class="font-base font-bold leading-5 tracking-[-0.2px] text-blue-6">info@kurganscan.ru</a>
+            </div>
+        </section>
+        <!-- Mobile menu end -->
+
+        <main>
+
+            <!-- Home -->
+            <section class="mb-[50px] lg:mb-[75px]">
+                <div class="relative z-[1] h-[140px] lg:h-[300px] rounded-lg overflow-hidden container">
+                    <img src="./images/vacancies-home-bg.png" alt="" class="absolute z-[-1] top-0 left-0 w-full h-full object-cover">
+                    <div class="absolute top-0 left-0 h-full w-full lg:w-[721px] bg-[#0b112899] backdrop-blur-[2px] flex flex-col justify-center text-white px-[29px] lg:px-[50px]">
+                        <h2 class="font-extrabold text-[26px] lg:text-[52px] tracking-[-0.9px] lg:tracking-[-1px] leading-8 lg:leading-[63px] text-center lg:text-start">Вакансии</h2>
+                    </div>
+                </div>
+            </section>
+            <!-- Home end -->
+
+            <!-- Team -->
+            <section class="mb-[85px] lg:mb-[75px]">
+                <div class="container">
+                    <h2 class="text-[22px] lg:text-[28px] text-center font-bold mb-[25px] lg:mb-[45px]">В команду КурганСкан требуются</h2>
+                    <ul class="max-w-[856px] mx-auto flex flex-col gap-[15px] lg:gap-[25px]">
+                        <li class="flex items-start lg:items-center gap-3 lg:gap-[25px] bg-blue-6 lg:bg-transparent p-3 lg:p-0 rounded-lg lg:rounded-none">
+                            <div class="w-[70px] lg:w-[306px] h-[70px] lg:h-[173px] rounded-lg overflow-hidden flex-shrink-0">
+                                <img src="./images/team-card-1.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="text-sm lg:text-lg font-bold lg:leading-[13px] leading-4 mb-3 lg:mb-[25px]">Автоэлектрик-диагност</h3>
+                                <p class="text-[9px] lg:text-sm leading-3 lg:leading-[20px]">Требуются навыки работы с диагностическим оборудованием, знание электрических схем и опыт в аналогичной должности. Внимательность, ответственность и умение работать в команде – обязательны.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start lg:items-center gap-3 lg:gap-[25px] bg-blue-6 lg:bg-transparent p-3 lg:p-0 rounded-lg lg:rounded-none">
+                            <div class="w-[70px] lg:w-[306px] h-[70px] lg:h-[173px] rounded-lg overflow-hidden flex-shrink-0">
+                                <img src="./images/team-card-2.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="text-sm lg:text-lg font-bold lg:leading-[13px] leading-4 mb-3 lg:mb-[25px]">Автослесарь</h3>
+                                <ul class="text-[9px] lg:text-sm leading-3 lg:leading-[20px] list-disc ml-3 lg:ml-5">
+                                    <li>Выполнение ремонтных работ (замена комплектующих, </li>
+                                    <li>ремонт двигателей, </li>
+                                    <li>тормозных систем и т.д.).</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="flex items-start lg:items-center gap-3 lg:gap-[25px] bg-blue-6 lg:bg-transparent p-3 lg:p-0 rounded-lg lg:rounded-none">
+                            <div class="w-[70px] lg:w-[306px] h-[70px] lg:h-[173px] rounded-lg overflow-hidden flex-shrink-0">
+                                <img src="./images/team-card-3.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="text-sm lg:text-lg font-bold lg:leading-[13px] leading-4 mb-3 lg:mb-[25px]">Кладовщик</h3>
+                                <ul class="text-[9px] lg:text-sm leading-3 lg:leading-[20px] list-disc ml-3 lg:ml-5">
+                                    <li>Приём товаров, контроль их количества и качества.</li>
+                                    <li>Размещение товаров на складе с учётом условий хранения.</li>
+                                    <li>Ведение учёта складских операций, инвентаризация.</li>
+                                    <li>Подготовка и комплектация заказов для выдачи или отгрузки.</li>
+                                    <li>Участие в погрузочно-разгрузочных работах.</li>
+                                    <li>Поддержание порядка и чистоты на складе.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-center mt-[25px] lg:mt-[45px]">
+                        <a href="#" class="btn-blue !font-bold">Заполнить анкету</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Team end -->
+
+            <!-- Condition -->
+            <section class="mb-[50px] lg:mb-[95px]">
+                <div class="container lg:border-t lg:border-t-blue-5 pt-0 lg:pt-[60px]">
+                    <h2 class="text-[22px] lg:text-[28px] text-center font-bold mb-[35px] px-[10px] lg:px-0">Комфортные условия для труда, отдыха и самореализации</h2>
+                    <div class="flex flex-col lg:flex-row gap-[25px] items-stretch">
+                        <div class="w-full lg:w-[calc(50%_-_12.5px)]">
+                            <div class="swiper condition-parent-swp rounded-lg mb-3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide h-[342px] lg:h-[334px]">
+                                        <img src="./images/condition-card-1.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide h-[342px] lg:h-[334px]">
+                                        <img src="./images/condition-card-2.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide h-[342px] lg:h-[334px]">
+                                        <img src="./images/condition-card-3.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide h-[342px] lg:h-[334px]">
+                                        <img src="./images/condition-card-4.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide h-[342px] lg:h-[334px]">
+                                        <img src="./images/condition-card-5.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide h-[342px] lg:h-[334px]">
+                                        <img src="./images/condition-card-6.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between gap-[7px] lg:gap-[11px]">
+                                <button class="condition-child-swp-prev bg-blue-5 hover:bg-blue-6 active:bg-blue-6 w-[25px] lg:w-[35px] h-[50px] lg:h-[100px] flex-shrink-0 flex items-center justify-center rounded-lg">
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 16L2.55782 9.65079C2.23683 9.2763 2.23683 8.7237 2.55782 8.34921L8 2" stroke="#456F95" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                                <div humbsSlider="" class="swiper condition-child-swp">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                            <img src="./images/condition-card-1.jpeg" alt="" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                            <img src="./images/condition-card-2.jpeg" alt="" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                            <img src="./images/condition-card-3.jpeg" alt="" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                            <img src="./images/condition-card-4.jpeg" alt="" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                            <img src="./images/condition-card-5.jpeg" alt="" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                            <img src="./images/condition-card-6.jpeg" alt="" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="condition-child-swp-next bg-blue-5 hover:bg-blue-6 active:bg-blue-6 w-[25px] lg:w-[35px] h-[50px] lg:h-[100px] flex-shrink-0 flex items-center justify-center rounded-lg">
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 2L6.94218 8.34921C7.26317 8.7237 7.26317 9.2763 6.94218 9.65079L1.5 16" stroke="#456F95" stroke-width="3" stroke-linecap="round"/>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-[calc(50%_-_12.5px)] bg-[linear-gradient(135deg,#FFFFFF,#C5E0F4)] flex items-center justify-center rounded-xl px-6 lg:px-0 py-[25px] lg:py-0">
+                            <ul class="w-full lg:w-[416px] list-disc text-sm lg:text-lg leading-[18px] lg:leading-6 flex flex-col gap-2 tracking-[-0.2px]">
+                                <li>Место для парковки личного автотранспорта</li>
+                                <li>Оборудованная обеденная зона с холодильником, чайником, микроволновкой</li>
+                                <li>Современное диагностическое оборудование и инструменты для сервисного обслуживания грузотехники</li>
+                                <li>Защитная рабочая форма</li>
+                                <li>Обучение и переподготовка кадров</li>
+                                <li>Место для курения</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Condition end -->
+
+            <!-- Road -->
+            <section class="mb-[50px] lg:mb-[75px]">
+                <div class="container lg:border-t lg:border-t-blue-5 lg:pt-[50px]">
+                    <h2 class="text-[22px] lg:text-[28px] text-center font-bold mb-[25px] lg:mb-[45px]">Как добраться</h2>
+                    <ul class="flex flex-wrap gap-x-[25px] gap-y-[50px]">
+                        <li class="w-full lg:w-[calc(100%_/_3_-_50px_/_3)]">
+                            <div class="w-full h-[233px] rounded-lg overflow-hidden mb-[15px] lg:mb-6">
+                                <img src="./images/road-card-1.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-3 lg:px-[25px]">
+                                <h3 class="text-base lg:text-lg leading-[16px] lg:leading-[16px] tracking-[-0.2px] mb-[15px] font-bold">На личном транспорте (10 минут от города)</h3>
+                                <p class="text-xs lg:text-sm leading-[16px] lg:leading-[16px] tracking-[-0.2px]">Предоставляем частичную компенсацию ГСМ</p>
+                            </div>
+                        </li>
+                        <li class="w-full lg:w-[calc(100%_/_3_-_50px_/_3)]">
+                            <div class="w-full h-[233px] rounded-lg overflow-hidden mb-[15px] lg:mb-6">
+                                <img src="./images/road-card-2.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-3 lg:px-[25px]">
+                                <h3 class="text-base lg:text-lg leading-[16px] lg:leading-[16px] tracking-[-0.2px] mb-[15px] font-bold">На городском общественном транспорте</h3>
+                                <p class="text-xs lg:text-sm leading-[16px] lg:leading-[16px] tracking-[-0.2px]">Маршруты №ххх, ххх</p>
+                            </div>
+                        </li>
+                        <li class="w-full lg:w-[calc(100%_/_3_-_50px_/_3)]">
+                            <div class="w-full h-[233px] rounded-lg overflow-hidden mb-[15px] lg:mb-6">
+                                <img src="./images/road-card-3.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-3 lg:px-[25px]">
+                                <h3 class="text-base lg:text-lg leading-[16px] lg:leading-[16px] tracking-[-0.2px] mb-[15px] font-bold">На бесплатном автобусе компании</h3>
+                                <p class="text-xs lg:text-sm leading-[16px] lg:leading-[16px] tracking-[-0.2px]">Отправка в разных частях города</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Road end -->
+
+            <!-- Contact -->
+            <section class="mb-[50px] lg:mb-[25px]">
+                <div class="container lg:pl-[110px] relative">
+                    <div class="bg-blue-6 border border-blue-4 border-solid rounded-xl w-full lg:w-[361px] lg:absolute top-[60px] left-0 pt-[33px] px-[22px] pb-[22px] lg:pb-[43px] mb-[15px] lg:mb-0">
+                        <div class="flex items-center justify-between mb-9">
+                            <h2 class="text-[22px] leading-[27px] font-bold tracking-[-0.2px]">АДРЕС И <br> КОНТАКТЫ</h2>
+                            <a href="#" class="flex items-center gap-3 text-xs leading-3 px-2 py-3 border border-blue-3 border-solid rounded">
+                                <img src="./images/yandex-navigation-icon.svg" alt="">
+                                <span>Построить <br> маршрут</span>
+                            </a>
+                        </div>
+                        <p class="text-[10px] leading-[18px] max-w-[295px] mb-[25px]">
+                            250 км трассы Курган-Челябинск Р-254 "Иртыш"
+                            <span class="font-bold block">641322, Курганская обл., Кетовский р-н, c. Введенское, ул. Сибирская д.1,</span>
+                        </p>
+                        <div class="flex flex-col gap-3">
+                            <a href="tel:+79824240888" class="flex items-center gap-[10px] p-[10px]">
+                                <img src="./images/phone-icon.svg" alt="" class="w-7">
+                                <span class="flex flex-col gap-1">
+                                    <span class="text-sm leading-[17px]">Отдел продаж</span>
+                                    <span class="text-lg leading-[22px] font-bold">+7 (982) 42-40-888</span>
+                                </span>
+                            </a>
+                            <a href="tel:+79824242888" class="flex items-center gap-[10px] p-[10px]">
+                                <img src="./images/phone-icon.svg" alt="" class="w-7">
+                                <span class="flex flex-col gap-1">
+                                    <span class="text-sm leading-[17px]">Сервисный центр</span>
+                                    <span class="text-lg leading-[22px] font-bold">+7 (982) 42-42-888</span>
+                                </span>
+                            </a>
+                            <div class="flex items-start gap-2 p-[10px]">
+                                <img src="./images/clock-orange.svg" alt="" class="w-7">
+                                <div class="flex flex-col gap-[14px]">
+                                    <p class="text-lg leading-[22px] pt-[3px]">
+                                        <span class="font-bold">Пн-Вс:</span> 8:00–20:00
+                                    </p>
+                                    <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <iframe class="w-full h-[488px] lg:h-[615px] border border-blue-5 border-solid rounded-xl overflow-hidden" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aade349a3abf9cc2a949253de085fcece706700e80e253cf86aa7c7081f384d0b&amp;source=constructor" frameborder="0"></iframe>
+                </div>
+            </section>
+            <!-- Contact end -->
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="pb-[58px]">
+            <div class="container">
+                <img src="./images/footer-line.svg" alt="" class="w-full block mb-[25px] lg:mb-[30px]">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-[25px]">
+                    <div>
+                        <p class="text-sm leading-[17px] tracking-[-0.2px] mb-2 lg:mb-[15px]">
+                            <span class="font-bold">КУРГАНСКАН ©</span> / 2024
+                        </p>
+                        <p class="text-blue-4 text-xs lg:text-sm leading-2 lg:leading-[10px]">Официальный дилер. Продажа техники и сервис.</p>
+                    </div>
+                    <div>
+                        <ul class="flex items-center flex-wrap lg:justify-end gap-y-1 gap-x-3 mb-[15px]">
+                            <li>
+                                <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Политика конфиденциальности</a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Правила сайта</a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Договор оферты</a>
+                            </li>
+                        </ul>
+                        <p class="text-blue-4 text-xs lg:text-sm lg:leading-[10px] text-start lg:text-end">Обращаем Ваше внимание на то, что все предложения на сайте не являются публичной офертой.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS file -->
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

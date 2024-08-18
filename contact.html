@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montaga&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Css file -->
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="font-montserrat font-normal text-blue-1">
+
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="pt-3 lg:pt-5 pb-[22px] lg:pb-[25px]">
+            <div class="flex items-center justify-between lg:!mb-[15px] container">
+                <a href="/">
+                    <img src="./images/logo.svg" alt="" class="h-14 lg:h-28">
+                </a>
+                <div class="flex items-center gap-20 xl:gap-[115.5px]">
+                    <a href="tel:+79824240888" class="hidden lg:flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Отдел продаж</span>
+                            <span class="font-bold">+7 (982) 42-40-888</span>
+                        </span>
+                    </a>
+                    <a href="tel:+79824242888" class="hidden lg:flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Сервисный центр</span>
+                            <span class="font-bold">+7 (982) 42-42-888</span>
+                        </span>
+                    </a>
+                    <div class="flex items-center gap-[25px] shadow-[0_2px_3px_rgba(0,0,0,0.1)] p-[10px] rounded-[7px]">
+                        <div class="hidden xl:flex items-center gap-2">
+                            <img src="./images/clock-orange.svg" alt="">
+                            <p class="text-blue-0 text-sm tracking-[-2%]">
+                                <span class="font-bold">Пн-Вс:</span> 8:00–20:00
+                            </p>
+                        </div>
+                        <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                    </div>
+                </div>
+                <button class="lg:hidden bars_btn">
+                    <img src="./images/bars.svg" alt="">
+                    <img src="./images/times.svg" alt="" class="hidden">
+                </button>
+            </div>
+            <ul class="bg-blue-1 rounded-[8px] hidden lg:flex items-center justify-center gap-8 xl:gap-[46.71px] py-[15px] text-sm text-white underline tracking-[-2%] container">
+                <li>
+                    <a href="#">Главная</a>
+                </li>
+                <li>
+                    <a href="#">Каталог техники</a>
+                </li>
+                <li>
+                    <a href="#">В наличии</a>
+                </li>
+                <li>
+                    <a href="#">Спецпредложения и акции</a>
+                </li>
+                <li>
+                    <a href="#">Сервис</a>
+                </li>
+                <li>
+                    <a href="#">Новости</a>
+                </li>
+                <li>
+                    <a href="#">Вакансии</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </header>
+        <!-- Header end -->
+
+        <!-- Mobile menu -->
+        <section class="absolute w-full top-20 left-0 z-10 text-white lg:hidden hidden mobile_menu">
+            <div class="container bg-blue-1 rounded-lg p-[25px] flex flex-col gap-[25px]">
+                <ul class="flex flex-col gap-5 text-lg font-light underline leading-[22px] tracking-[-0.2px]">
+                    <li>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#">Каталог техники</a>
+                    </li>
+                    <li>
+                        <a href="#">В наличии</a>
+                    </li>
+                    <li>
+                        <a href="#">Спецпредложения и акции</a>
+                    </li>
+                    <li>
+                        <a href="#">Сервис</a>
+                    </li>
+                    <li>
+                        <a href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#">Вакансии</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="bg-blue-2 h-[1px] w-full"></div>
+                <div class="w-full bg-blue-6 flex flex-col gap-[25px] rounded-lg p-3">
+                    <a href="tel:+79824240888" class="flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Отдел продаж</span>
+                            <span class="font-bold">+7 (982) 42-40-888</span>
+                        </span>
+                    </a>
+                    <a href="tel:+79824242888" class="flex items-center gap-2">
+                        <img src="./images/phone-icon.svg" alt="">
+                        <span class="flex flex-col gap-[2px] text-blue-1">
+                            <span class=" text-[15px] tracking-[-2%]">Сервисный центр</span>
+                            <span class="font-bold">+7 (982) 42-42-888</span>
+                        </span>
+                    </a>
+                </div>
+                <a href="#" class="font-base font-bold leading-5 tracking-[-0.2px] text-blue-6">info@kurganscan.ru</a>
+            </div>
+        </section>
+        <!-- Mobile menu end -->
+
+        <main>
+
+            <!-- Contact -->
+            <section class="mb-[50px] lg:mb-[25px]">
+                <div class="container flex items-stretch flex-col-reverse lg:flex-row">
+                    <iframe class="w-full h-[488px] lg:h-[615px] border border-blue-5 border-solid lg:border-0 rounded-xl lg:rounded-[12px_0_0_12px] overflow-hidden" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aade349a3abf9cc2a949253de085fcece706700e80e253cf86aa7c7081f384d0b&amp;source=constructor" frameborder="0"></iframe>
+                    <div class="bg-blue-6 border border-blue-4 border-solid lg:border-0 rounded-xl lg:rounded-[0_12px_12px_0] w-full lg:w-[416px] pt-[33px] px-[22px] pb-[22px] lg:pb-[43px] mb-[15px] lg:mb-0 flex-shrink-0">
+                        <div class="flex items-center justify-between mb-9">
+                            <h2 class="text-[22px] leading-[27px] font-bold tracking-[-0.2px]">АДРЕСА И КОНТАКТЫ</h2>
+                        </div>
+                        <p class="text-[10px] leading-[18px] max-w-[295px] mb-[25px]">
+                            250 км трассы Курган-Челябинск Р-254 "Иртыш" <br> 641322, Курганская обл., Кетовский р-н, c. Введенское, ул. Сибирская д.1,
+                        </p>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex items-start gap-2 p-[10px]">
+                                <img src="./images/clock-orange.svg" alt="" class="w-7">
+                                <div class="flex flex-col gap-[14px]">
+                                    <p class="text-lg leading-[22px] pt-[3px]">
+                                        <span class="font-bold">Пн-Вс:</span> 8:00–20:00
+                                    </p>
+                                    <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                                </div>
+                            </div>
+                            <a href="tel:+79824240888" class="flex items-center gap-[10px] p-[10px]">
+                                <img src="./images/phone-icon.svg" alt="" class="w-7">
+                                <span class="flex flex-col gap-1">
+                                    <span class="text-sm leading-[17px]">Отдел продаж</span>
+                                    <span class="text-lg leading-[22px] font-bold">+7 (982) 42-40-888</span>
+                                </span>
+                            </a>
+                            <a href="tel:+79824242888" class="flex items-center gap-[10px] p-[10px]">
+                                <img src="./images/phone-icon.svg" alt="" class="w-7">
+                                <span class="flex flex-col gap-1">
+                                    <span class="text-sm leading-[17px]">Сервисный центр</span>
+                                    <span class="text-lg leading-[22px] font-bold">+7 (982) 42-42-888</span>
+                                </span>
+                            </a>
+                            <a href="tel:+79195660777" class="flex items-center gap-[10px] p-[10px]">
+                                <img src="./images/phone-icon.svg" alt="" class="w-7">
+                                <span class="flex flex-col gap-1">
+                                    <span class="text-sm leading-[17px]">Сервисный центр</span>
+                                    <span class="text-lg leading-[22px] font-bold">+7 (919) 566-07-77</span>
+                                </span>
+                            </a>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-3 text-xs leading-3 px-2 py-3 border border-blue-3 border-solid rounded mt-[25px]">
+                            <img src="./images/yandex-navigation-icon.svg" alt="">
+                            <span>Построить <br> маршрут</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact end -->
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="pb-[58px]">
+            <div class="container">
+                <img src="./images/footer-line.svg" alt="" class="w-full block mb-[25px] lg:mb-[30px]">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-[25px]">
+                    <div>
+                        <p class="text-sm leading-[17px] tracking-[-0.2px] mb-2 lg:mb-[15px]">
+                            <span class="font-bold">КУРГАНСКАН ©</span> / 2024
+                        </p>
+                        <p class="text-blue-4 text-xs lg:text-sm leading-2 lg:leading-[10px]">Официальный дилер. Продажа техники и сервис.</p>
+                    </div>
+                    <div>
+                        <ul class="flex items-center flex-wrap lg:justify-end gap-y-1 gap-x-3 mb-[15px]">
+                            <li>
+                                <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Политика конфиденциальности</a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Правила сайта</a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-sm leading-[10px] lg:leading-[17px] underline">Договор оферты</a>
+                            </li>
+                        </ul>
+                        <p class="text-blue-4 text-xs lg:text-sm lg:leading-[10px] text-start lg:text-end">Обращаем Ваше внимание на то, что все предложения на сайте не являются публичной офертой.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS file -->
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
