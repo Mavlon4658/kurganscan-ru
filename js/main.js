@@ -1,3 +1,11 @@
+const overflowHidden = () => {
+    document.querySelector('body').style.overflow = 'hidden';
+}
+
+const overflowVisible = () => {
+    document.querySelector('body').style.overflow = 'visible';
+}
+
 let newSwp = new Swiper('.newSwp', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -112,5 +120,32 @@ let modalSwpParent = new Swiper('.modal-swp-parent', {
     },
     thumbs: {
         swiper: modalSwpChild,
+    }
+})
+
+let modalClass = ['.seel-overlay', '.job-overlay', '.overlay', '.service-overlay', '.form-result', '.auto-modal'];
+
+modalClass.forEach(cls => {
+    let modal = document.querySelector(cls),
+        modalClose = document.querySelector(cls + ' .main-modal__close'),
+        modalOpen = document.querySelectorAll(cls + '__open');
+
+    if (modalOpen.length) {
+        modalOpen.forEach(el => {
+            el.onclick = e => {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                overflowHidden();
+            }
+        })
+    }
+
+    if (modalClose) {
+        modalClose.onclick = () => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            overflowVisible();
+        }
     }
 })

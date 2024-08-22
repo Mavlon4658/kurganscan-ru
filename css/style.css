@@ -21,19 +21,27 @@
 }
 
 .btn-blue-sm {
-    @apply bg-blue-1 text-white h-[37px] lg:h-[34px] rounded-[8px] inline-flex items-center justify-center px-3 text-xs lg:text-sm tracking-[-4%]
+    @apply hover:bg-orange-1 bg-blue-1 text-white h-[37px] lg:h-[34px] rounded-[8px] inline-flex items-center justify-center px-3 text-xs lg:text-sm tracking-[-4%]
 }
 
 .btn-blue {
-    @apply bg-blue-1 text-white flex items-center justify-center gap-[10px] text-lg leading-[13px] tracking-[-0.6px] w-[240px] h-[55px] rounded-[12px];
+    @apply hover:bg-orange-1 bg-blue-1 text-white flex items-center justify-center gap-[10px] text-lg leading-[13px] tracking-[-0.6px] w-[240px] h-[55px] rounded-[12px];
 }
 
 .btn-lightblue {
-    @apply w-full h-[37px] lg:h-[34px] flex items-center justify-center rounded-lg bg-blue-4 text-[10px] lg:text-sm font-bold lg:font-normal
+    @apply hover:bg-orange-1 hover:text-white w-full h-[37px] lg:h-[34px] flex items-center justify-center rounded-lg bg-blue-4 text-[10px] lg:text-sm font-bold lg:font-normal
 }
 
 .swp-pagination {
     @apply !w-auto flex items-center gap-1
+}
+
+header ul li a, .mobile_menu ul li a {
+    @apply underline
+}
+
+header ul li a.active, .mobile_menu ul li a.active {
+    @apply font-bold !no-underline
 }
 
 .swp-pagination span {
@@ -51,4 +59,22 @@
 
 .scrollbar-hide::-webkit-scrollbar {
     @apply hidden;
+}
+
+.form-inp {
+    @apply text-blue-3 w-full h-[49px] border border-blue-2 border-solid rounded px-[21px] text-lg tracking-[-0.3px]
+}
+
+.form-inp::placeholder {
+    @apply text-blue-3
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../images/select-icon.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 22px) center;
+    @apply text-blue-3 w-full h-[49px] border border-blue-2 border-solid rounded px-[21px] text-lg tracking-[-0.3px];
 }

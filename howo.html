@@ -18,6 +18,7 @@
     <div class="wrapper">
 
         <!-- Header -->
+        <!-- Header -->
         <header class="pt-3 lg:pt-5 pb-[22px] lg:pb-[25px]">
             <div class="flex items-center justify-between lg:!mb-[15px] container">
                 <a href="/">
@@ -45,20 +46,20 @@
                                 <span class="font-bold">Пн-Вс:</span> 8:00–20:00
                             </p>
                         </div>
-                        <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                        <a href="#" class="btn-blue-sm overlay__open">Обратный звонок</a>
                     </div>
                 </div>
-                <button class="lg:hidden bars_btn">
+                <button class="lg:hidden w-[22px] h-4 flex items-center justify-center bars_btn">
                     <img src="./images/bars.svg" alt="">
                     <img src="./images/times.svg" alt="" class="hidden">
                 </button>
             </div>
-            <ul class="bg-blue-1 rounded-[8px] hidden lg:flex items-center justify-center gap-8 xl:gap-[46.71px] py-[15px] text-sm text-white underline tracking-[-2%] container">
+            <ul class="bg-blue-1 rounded-[8px] hidden lg:flex items-center justify-center gap-8 xl:gap-[46.71px] py-[15px] text-sm text-white tracking-[-2%] container">
                 <li>
                     <a href="#">Главная</a>
                 </li>
                 <li>
-                    <a href="#">Каталог техники</a>
+                    <a href="#" class="active">Каталог техники</a>
                 </li>
                 <li>
                     <a href="#">В наличии</a>
@@ -85,12 +86,12 @@
         <!-- Mobile menu -->
         <section class="absolute w-full top-20 left-0 z-10 text-white lg:hidden hidden mobile_menu">
             <div class="container bg-blue-1 rounded-lg p-[25px] flex flex-col gap-[25px]">
-                <ul class="flex flex-col gap-5 text-lg font-light underline leading-[22px] tracking-[-0.2px]">
+                <ul class="flex flex-col gap-5 text-lg font-light leading-[22px] tracking-[-0.2px]">
                     <li>
                         <a href="#">Главная</a>
                     </li>
                     <li>
-                        <a href="#">Каталог техники</a>
+                        <a href="#" class="active">Каталог техники</a>
                     </li>
                     <li>
                         <a href="#">В наличии</a>
@@ -133,6 +134,222 @@
         </section>
         <!-- Mobile menu end -->
 
+        <!-- Modals -->
+        <!-- Seel overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal seel-overlay">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[30px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%]">
+                    <span class="text-blue-1 block">ЗАЯВКА</span> В ОТДЕЛ ПРОДАЖ
+                </h2>
+                <p class="text-sm tracking-[-0.2px] leading-[100%]">Мы получим заявку даже в нерабочее время и <br> свяжемся с вами</p>
+                <form class="flex flex-col items-start gap-[18px]">
+                    <input type="text" class="form-inp" placeholder="Имя">
+                    <input type="tel" class="form-inp" placeholder="Телефон">
+                    <button type="submit" class="btn-blue">Отправить</button>
+                </form>
+                <p class="text-blue-3 text-xs tracking-[-0.2px]">
+                    Отправляя заявку, я даю <a href="#" class="inline underline">согласие на обработку персональных данных</a>
+                </p>
+            </div>
+        </section>
+        <!-- Seel overlay end -->
+        
+        <!-- Job overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal job-overlay">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[30px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%]">
+                    <span class="text-blue-1 block">ОТКЛИКНУТЬСЯ</span> НА ВАКАНСИЮ
+                </h2>
+                <p class="text-sm tracking-[-0.2px] leading-[100%]">Мы получим заявку даже в нерабочее время и <br> свяжемся с вами</p>
+                <form class="flex flex-col items-start gap-[18px]">
+                    <input type="text" class="form-inp" placeholder="Имя">
+                    <input type="tel" class="form-inp" placeholder="Телефон">
+                    <input type="tel" class="form-inp" placeholder="Ссылка на резюме">
+                    <select name="" id="" class="form-select">
+                        <option value="" hidden selected>Выбрать вакансию</option>
+                        <option value="">Опция 1</option>
+                        <option value="">Опция 2</option>
+                        <option value="">Опция 3</option>
+                        <option value="">Опция 4</option>
+                        <option value="">Опция 5</option>
+                    </select>
+                    <button type="submit" class="btn-blue">Отправить</button>
+                </form>
+                <p class="text-blue-3 text-xs tracking-[-0.2px]">
+                    Отправляя заявку, я даю <a href="#" class="inline underline">согласие на обработку персональных данных</a>
+                </p>
+            </div>
+        </section>
+        <!-- Job overlay end -->
+        
+        <!-- Overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal overlay">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[30px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%] tracking-[-0.5px]">
+                    <span class="text-blue-1 block">ЗАЯВКА</span> НА ОБРАТНЫЙ ЗВОНОК
+                </h2>
+                <p class="text-sm tracking-[-0.2px] leading-[100%]">Мы получим заявку даже в нерабочее время и <br> свяжемся с вами</p>
+                <form class="flex flex-col items-start gap-[18px]">
+                    <input type="text" class="form-inp" placeholder="Имя">
+                    <input type="tel" class="form-inp" placeholder="Телефон">
+                    <button type="submit" class="btn-blue">Отправить</button>
+                </form>
+                <p class="text-blue-3 text-xs tracking-[-0.2px]">
+                    Отправляя заявку, я даю <a href="#" class="inline underline">согласие на обработку персональных данных</a>
+                </p>
+            </div>
+        </section>
+        <!-- Overlay end -->
+        
+        <!-- Service overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal service-overlay">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[30px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%] tracking-[-0.5px]">
+                    <span class="text-blue-1 block">ЗАПИСАТЬСЯ</span> НА СЕРВИС
+                </h2>
+                <p class="text-sm tracking-[-0.2px] leading-[100%]">Мы получим заявку даже в нерабочее время и <br> свяжемся с вами</p>
+                <form class="flex flex-col items-start gap-[18px]">
+                    <input type="text" class="form-inp" placeholder="Имя">
+                    <input type="tel" class="form-inp" placeholder="Телефон">
+                    <button type="submit" class="btn-blue">Отправить</button>
+                </form>
+                <p class="text-blue-3 text-xs tracking-[-0.2px]">
+                    Отправляя заявку, я даю <a href="#" class="inline underline">согласие на обработку персональных данных</a>
+                </p>
+            </div>
+        </section>
+        <!-- Service overlay end -->
+        
+        <!-- Service overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal form-result">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[50px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%] tracking-[-0.5px]">
+                    <span class="text-blue-1 block">ЗАЯВКА</span> В ОТДЕЛ ПРОДАЖ
+                </h2>
+                <div class="flex items-center gap-3">
+                    <img src="./images/check-ionc-big.svg" alt="">
+                    <p class="text-sm font-bold tracking-[-0.2px]">Данные отправлены, спасибо! <br>Ожидайте звонка от менеджера. </p>
+                </div>
+                <ul class="flex flex-col gap-3">
+                    <li class="text-sm leading-[10px] tracking-[-0.2px] italic">Что делать, если со мной не связались?</li>
+                    <li class="text-sm leading-[10px] tracking-[-0.2px]">1. Позвонить по номеру: <span class="font-bold italic">+7 (982) 42-40-888</span></li>
+                    <li class="text-sm leading-[10px] tracking-[-0.2px]">2. Отправить письмо по e-mail: <span class="italic">info@kurganscan.ru</span></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Service overlay end -->
+
+        <!-- Modal -->
+        <section class="fixed top-0 left-0 w-full h-full bg-white z-10 hidden lg:items-center lg:justify-center pb-[60px] lg:pb-0 overflow-y-scroll scrollbar-hide lg:overflow-y-hidden auto-modal">
+            <div class="container pt-[60px] pb-5">
+                <div class="max-w-[860px] relative mx-auto border border-blue-4 rounded-lg p-2 flex flex-col lg:flex-row items-start gap-6">
+                    <button class="absolute right-0 lg:-right-7 -top-[26px] main-modal__close">
+                        <img src="./images/times.svg" alt="">
+                    </button>
+                    <div class="w-full lg:w-[calc(100%_-_326px)]">
+                        <div class="swiper rounded-lg mb-3 modal-swp-parent">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide h-[300px] lg:h-[432px]">
+                                    <img src="./images/client-card-1.jpeg" alt="" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide h-[300px] lg:h-[432px]">
+                                    <img src="./images/client-card-2.jpeg" alt="" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide h-[300px] lg:h-[432px]">
+                                    <img src="./images/client-card-3.jpeg" alt="" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide h-[300px] lg:h-[432px]">
+                                    <img src="./images/client-card-4.jpeg" alt="" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide h-[300px] lg:h-[432px]">
+                                    <img src="./images/client-card-5.jpeg" alt="" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full flex items-center justify-between lg:justify-center gap-[7px] lg:gap-3">
+                            <button class="modal-child-swp-prev bg-blue-5 hover:bg-blue-6 active:bg-blue-6 w-[25px] lg:w-[35px] h-[50px] lg:h-[100px] flex-shrink-0 flex items-center justify-center rounded-lg">
+                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 16L2.55782 9.65079C2.23683 9.2763 2.23683 8.7237 2.55782 8.34921L8 2" stroke="#456F95" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <div humbsSlider="" class="swiper modal-child-swp">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                        <img src="./images/client-card-1.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                        <img src="./images/client-card-2.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                        <img src="./images/client-card-3.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                        <img src="./images/client-card-4.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide h-[50px] lg:h-[100px] rounded-lg overflow-hidden">
+                                        <img src="./images/client-card-5.jpeg" alt="" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="modal-child-swp-next bg-blue-5 hover:bg-blue-6 active:bg-blue-6 w-[25px] lg:w-[35px] h-[50px] lg:h-[100px] flex-shrink-0 flex items-center justify-center rounded-lg">
+                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 2L6.94218 8.34921C7.26317 8.7237 7.26317 9.2763 6.94218 9.65079L1.5 16" stroke="#456F95" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-[302px] flex-shrink-0 lg:py-[15px] lg:px-3 flex flex-col gap-6">
+                        <h2 class="text-lg lg:text-2xl font-bold leading-[24px] lg:leading-[23px]">Самосвал HOWO T5G 8Х4</h2>
+                        <ul class="flex flex-col gap-3 text-[#020F46] text-xs lg:text-sm leading-[10px] lg:leading-[10px]">
+                            <li>
+                                <span class="font-bold mr-[6px]">Двигатель/Мощность:</span> MC11.44/440
+                            </li>
+                            <li>
+                                <span class="font-bold mr-[6px]">Колесная формула:</span> 8х4
+                            </li>
+                            <li>
+                                <span class="font-bold mr-[6px]">Объем баков:</span> 300
+                            </li>
+                            <li>
+                                <span class="font-bold mr-[6px]">КПП:</span> Механика
+                            </li>
+                            <li>
+                                <span class="font-bold mr-[6px]">Объем кузова:</span> 24,5
+                            </li>
+                        </ul>
+                        <p class="text-xs lg:text-sm leading-[13px] lg:leading-4 text-[#020F46] border-y border-y-blue-5 border-solid py-3">Сюда можно добавить небольшое описание автомобиля.</p>
+                        <div class="flex flex-col gap-3">
+                            <a href="#" class="btn-blue-sm !w-full">Уточнить стоимость</a>
+                            <a href="#" class="btn-lightblue">Спецификация</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal end -->
+        <!-- Modals end -->
+
         <main>
 
             <!-- Home -->
@@ -144,8 +361,8 @@
                         <p class="mb-7 hidden lg:block text-xs lg:text-[22px] leading-[100%] text-center lg:text-start">В НАЛИЧИИ В КУРГАНЕ</p>
                         <p class="mb-[65px] text-xs lg:text-[22px] leading-[100%] text-center lg:text-start">Продажа. Гарантийное обслуживание и ремонт. <br class="hidden lg:block"> Сертифицированный сервисный центр</p>
                         <div class="flex flex-col lg:flex-row items-center gap-[15px] lg:gap-[22px]">
-                            <a href="#" class="w-[240px] h-[55px] flex items-center justify-center bg-white rounded-xl text-lg leading-[13px] text-orange-1 font-bold tracking-[-0.6px]">Отдел продаж</a>
-                            <a href="#" class="w-[240px] h-[55px] flex items-center justify-center bg-white rounded-xl text-lg leading-[13px] text-blue-1 tracking-[-0.6px]">Обратный звонок</a>
+                            <a href="#" class="w-[240px] h-[55px] flex items-center justify-center bg-white rounded-xl text-lg leading-[13px] text-orange-1 font-bold tracking-[-0.6px] hover:bg-blue-1 hover:text-white overlay__open">Позвонить</a>
+                            <a href="#" class="w-[240px] h-[55px] flex items-center justify-center bg-white rounded-xl text-lg leading-[13px] text-blue-1 tracking-[-0.6px] hover:bg-blue-1 hover:text-white overlay__open">Обратный звонок</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +375,7 @@
                     <h2 class="text-center text-blue-1 text-[22px] lg:text-[28px] font-bold mb-[25px] lg:mb-[35px] px-[10px] lg:px-0">Модельный ряд HOWO</h2>
                     <ul class="flex items-center justify-center gap-3">
                         <li class="border border-blue-4 rounded-xl lg:rounded-lg w-full lg:w-[306px] p-2 lg:pb-5 flex flex-col gap-3 lg:gap-6">
-                            <div class="w-full h-[155px] lg:h-[260px] rounded-lg lg:rounded overflow-hidden">
+                            <div class="w-full h-[155px] lg:h-[260px] rounded-lg lg:rounded overflow-hidden auto-modal__open">
                                 <img src="./images/howo-card-1.png" alt="" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-[10px] lg:text-lg leading-[7px] lg:leading-[13px] font-bold text-blue-0 tracking-[-0.3px] lg:px-3">Самосвал HOWO T5G 8Х4</h3>
@@ -168,7 +385,7 @@
                             </div>
                         </li>
                         <li class="border border-blue-4 rounded-xl lg:rounded-lg w-full lg:w-[306px] p-2 lg:pb-5 flex flex-col gap-3 lg:gap-6">
-                            <div class="w-full h-[155px] lg:h-[260px] rounded-lg lg:rounded overflow-hidden">
+                            <div class="w-full h-[155px] lg:h-[260px] rounded-lg lg:rounded overflow-hidden auto-modal__open">
                                 <img src="./images/howo-card-2.jpeg" alt="" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-[10px] lg:text-lg leading-[7px] lg:leading-[13px] font-bold text-blue-0 tracking-[-0.3px] lg:px-3">Самосвал HOWO T5G 6Х4</h3>
@@ -228,7 +445,7 @@
                                 <img src="./images/phone-icon-circle.svg" alt="">
                                 <span>+7 (982) 42-40-888</span>
                             </a>
-                            <a href="#" class="btn-blue">Обратный звонок</a>
+                            <a href="#" class="btn-blue overlay__open">Обратный звонок</a>
                         </div>
                     </div>
                 </div>
@@ -296,7 +513,7 @@
 
             <!-- Official dealer -->
             <section class="mb-[60px] lg:mb-[85px]">
-                <div class="container lg:border-t lg:border-t-blue-5">
+                <div class="container lg:border-t lg:border-t-blue-5 lg:pt-[60px]">
                     <div class="max-w-[1103px] mx-auto flex items-start justify-between flex-col lg:flex-row gap-[35px]">
                         <div class="w-full lg:w-auto">
                             <h2 class="lg:max-w-[500px] text-center lg:text-start text-blue-1 text-[22px] lg:text-[28px] font-bold pt-[10px] lg:pt-0">ООО “КУРГАНСКАН” <br class="hidden lg:block"> официальный дилер HOWO в Кургане и Курганской области</h2>
@@ -304,7 +521,7 @@
                                 <img src="./images/dealer-card-1.jpeg" alt="" class="w-full h-full object-cover">
                             </div>
                         </div>
-                        <div class="lg:-mt-1 w-full lg:w-[442px] flex-shrink-0 flex justify-center">
+                        <div class="w-full lg:w-[442px] flex-shrink-0 flex justify-center">
                             <img src="./images/certificate-card-1.png" alt="" class="w-[248px] lg:w-full">
                         </div>
                     </div>
@@ -439,7 +656,7 @@
                                     <p class="text-lg leading-[22px] pt-[3px]">
                                         <span class="font-bold">Пн-Вс:</span> 8:00–20:00
                                     </p>
-                                    <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                                    <a href="#" class="btn-blue-sm overlay__open">Обратный звонок</a>
                                 </div>
                             </div>
                         </div>

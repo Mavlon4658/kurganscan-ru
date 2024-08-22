@@ -45,15 +45,15 @@
                                 <span class="font-bold">Пн-Вс:</span> 8:00–20:00
                             </p>
                         </div>
-                        <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                        <a href="#" class="btn-blue-sm overlay__open">Обратный звонок</a>
                     </div>
                 </div>
-                <button class="lg:hidden bars_btn">
+                <button class="lg:hidden w-[22px] h-4 flex items-center justify-center bars_btn">
                     <img src="./images/bars.svg" alt="">
                     <img src="./images/times.svg" alt="" class="hidden">
                 </button>
             </div>
-            <ul class="bg-blue-1 rounded-[8px] hidden lg:flex items-center justify-center gap-8 xl:gap-[46.71px] py-[15px] text-sm text-white underline tracking-[-2%] container">
+            <ul class="bg-blue-1 rounded-[8px] hidden lg:flex items-center justify-center gap-8 xl:gap-[46.71px] py-[15px] text-sm text-white tracking-[-2%] container">
                 <li>
                     <a href="#">Главная</a>
                 </li>
@@ -76,7 +76,7 @@
                     <a href="#">Вакансии</a>
                 </li>
                 <li>
-                    <a href="#">Контакты</a>
+                    <a href="#" class="active">Контакты</a>
                 </li>
             </ul>
         </header>
@@ -85,7 +85,7 @@
         <!-- Mobile menu -->
         <section class="absolute w-full top-20 left-0 z-10 text-white lg:hidden hidden mobile_menu">
             <div class="container bg-blue-1 rounded-lg p-[25px] flex flex-col gap-[25px]">
-                <ul class="flex flex-col gap-5 text-lg font-light underline leading-[22px] tracking-[-0.2px]">
+                <ul class="flex flex-col gap-5 text-lg font-light leading-[22px] tracking-[-0.2px]">
                     <li>
                         <a href="#">Главная</a>
                     </li>
@@ -108,7 +108,7 @@
                         <a href="#">Вакансии</a>
                     </li>
                     <li>
-                        <a href="#">Контакты</a>
+                        <a href="#" class="active">Контакты</a>
                     </li>
                 </ul>
                 <div class="bg-blue-2 h-[1px] w-full"></div>
@@ -133,6 +133,132 @@
         </section>
         <!-- Mobile menu end -->
 
+        <!-- Modals -->
+        <!-- Seel overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal seel-overlay">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[30px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%]">
+                    <span class="text-blue-1 block">ЗАЯВКА</span> В ОТДЕЛ ПРОДАЖ
+                </h2>
+                <p class="text-sm tracking-[-0.2px] leading-[100%]">Мы получим заявку даже в нерабочее время и <br> свяжемся с вами</p>
+                <form class="flex flex-col items-start gap-[18px]">
+                    <input type="text" class="form-inp" placeholder="Имя">
+                    <input type="tel" class="form-inp" placeholder="Телефон">
+                    <button type="submit" class="btn-blue">Отправить</button>
+                </form>
+                <p class="text-blue-3 text-xs tracking-[-0.2px]">
+                    Отправляя заявку, я даю <a href="#" class="inline underline">согласие на обработку персональных данных</a>
+                </p>
+            </div>
+        </section>
+        <!-- Seel overlay end -->
+        
+        <!-- Job overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal job-overlay">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[30px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%]">
+                    <span class="text-blue-1 block">ОТКЛИКНУТЬСЯ</span> НА ВАКАНСИЮ
+                </h2>
+                <p class="text-sm tracking-[-0.2px] leading-[100%]">Мы получим заявку даже в нерабочее время и <br> свяжемся с вами</p>
+                <form class="flex flex-col items-start gap-[18px]">
+                    <input type="text" class="form-inp" placeholder="Имя">
+                    <input type="tel" class="form-inp" placeholder="Телефон">
+                    <input type="tel" class="form-inp" placeholder="Ссылка на резюме">
+                    <select name="" id="" class="form-select">
+                        <option value="" hidden selected>Выбрать вакансию</option>
+                        <option value="">Опция 1</option>
+                        <option value="">Опция 2</option>
+                        <option value="">Опция 3</option>
+                        <option value="">Опция 4</option>
+                        <option value="">Опция 5</option>
+                    </select>
+                    <button type="submit" class="btn-blue">Отправить</button>
+                </form>
+                <p class="text-blue-3 text-xs tracking-[-0.2px]">
+                    Отправляя заявку, я даю <a href="#" class="inline underline">согласие на обработку персональных данных</a>
+                </p>
+            </div>
+        </section>
+        <!-- Job overlay end -->
+        
+        <!-- Overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal overlay">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[30px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%] tracking-[-0.5px]">
+                    <span class="text-blue-1 block">ЗАЯВКА</span> НА ОБРАТНЫЙ ЗВОНОК
+                </h2>
+                <p class="text-sm tracking-[-0.2px] leading-[100%]">Мы получим заявку даже в нерабочее время и <br> свяжемся с вами</p>
+                <form class="flex flex-col items-start gap-[18px]">
+                    <input type="text" class="form-inp" placeholder="Имя">
+                    <input type="tel" class="form-inp" placeholder="Телефон">
+                    <button type="submit" class="btn-blue">Отправить</button>
+                </form>
+                <p class="text-blue-3 text-xs tracking-[-0.2px]">
+                    Отправляя заявку, я даю <a href="#" class="inline underline">согласие на обработку персональных данных</a>
+                </p>
+            </div>
+        </section>
+        <!-- Overlay end -->
+        
+        <!-- Service overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal service-overlay">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[30px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%] tracking-[-0.5px]">
+                    <span class="text-blue-1 block">ЗАПИСАТЬСЯ</span> НА СЕРВИС
+                </h2>
+                <p class="text-sm tracking-[-0.2px] leading-[100%]">Мы получим заявку даже в нерабочее время и <br> свяжемся с вами</p>
+                <form class="flex flex-col items-start gap-[18px]">
+                    <input type="text" class="form-inp" placeholder="Имя">
+                    <input type="tel" class="form-inp" placeholder="Телефон">
+                    <button type="submit" class="btn-blue">Отправить</button>
+                </form>
+                <p class="text-blue-3 text-xs tracking-[-0.2px]">
+                    Отправляя заявку, я даю <a href="#" class="inline underline">согласие на обработку персональных данных</a>
+                </p>
+            </div>
+        </section>
+        <!-- Service overlay end -->
+        
+        <!-- Service overlay -->
+        <section class="fixed top-0 left-0 w-full h-full z-10 hidden justify-center items-center main-modal form-result">
+            <div class="absolute top-0 left-0 w-full h-full opacity-75 bg-[#404040]"></div>
+            <div class="relative bg-white rounded-lg w-[calc(100%_-_40px)] sm:w-[490px] px-9 py-[55px] flex flex-col gap-[50px]">
+                <button class="absolute top-[18px] right-[18px] main-modal__close">
+                    <img src="./images/times.svg" alt="">
+                </button>
+                <h2 class="text-blue-3 uppercase text-[32px] font-bold leading-[100%] tracking-[-0.5px]">
+                    <span class="text-blue-1 block">ЗАЯВКА</span> В ОТДЕЛ ПРОДАЖ
+                </h2>
+                <div class="flex items-center gap-3">
+                    <img src="./images/check-ionc-big.svg" alt="">
+                    <p class="text-sm font-bold tracking-[-0.2px]">Данные отправлены, спасибо! <br>Ожидайте звонка от менеджера. </p>
+                </div>
+                <ul class="flex flex-col gap-3">
+                    <li class="text-sm leading-[10px] tracking-[-0.2px] italic">Что делать, если со мной не связались?</li>
+                    <li class="text-sm leading-[10px] tracking-[-0.2px]">1. Позвонить по номеру: <span class="font-bold italic">+7 (982) 42-40-888</span></li>
+                    <li class="text-sm leading-[10px] tracking-[-0.2px]">2. Отправить письмо по e-mail: <span class="italic">info@kurganscan.ru</span></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Service overlay end -->
+        <!-- Modals end -->
+
         <main>
 
             <!-- Contact -->
@@ -153,7 +279,7 @@
                                     <p class="text-lg leading-[22px] pt-[3px]">
                                         <span class="font-bold">Пн-Вс:</span> 8:00–20:00
                                     </p>
-                                    <a href="#" class="btn-blue-sm">Обратный звонок</a>
+                                    <a href="#" class="btn-blue-sm overlay__open">Обратный звонок</a>
                                 </div>
                             </div>
                             <a href="tel:+79824240888" class="flex items-center gap-[10px] p-[10px]">
